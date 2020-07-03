@@ -1,0 +1,124 @@
+
+ @import './assets/style/animate.min.css';
+ @import './assets/style/index.scss';
+ @font-face {
+    font-family: 'iconfont';
+    src: url('./assets/iconFont/iconfont.eot');
+    src: url('./assets/iconFont/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('./assets/iconFont/iconfont.woff2') format('woff2'),
+        url('./assets/iconFont/iconfont.woff') format('woff'),
+        url('./assets/iconFont/iconfont.ttf') format('truetype'),
+        url('./assets/iconFont/iconfont.svg#iconfont') format('svg');
+  }
+
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+
+  .message-box{
+    box-sizing: border-box;
+    color: rgba(0,0,0,.65);
+    font-size: 14px;
+    line-height: 1.5;
+    list-style: none;
+    font-feature-settings: "tnum";
+    position: fixed;
+    top: 16px;
+    left: 43%;
+    right: 43%;
+    z-index: 9999999;
+    pointer-events: none;
+    display: inline-block;
+    padding: 10px 16px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: all 1s;
+  }
+  .err-box{
+    &::before{
+      content: 'x';
+      padding: 0px 5px;
+      background: #e9582c;
+      border-radius: 50%;
+      color: #fff;
+      margin-right: 10px;
+    }
+  }
+  .info-box {
+     &::before{
+      content: '!';
+      padding: 0px 5px;
+      background: #dfc11b;
+      border-radius: 50%;
+      color: #fff;
+      margin-right: 10px;
+    }
+  }
+  .success-box {
+     &::before{
+      content: '√';
+      padding: 0px 5px;
+      background: #0ca814;
+      border-radius: 50%;
+      color: #fff;
+      margin-right: 10px;
+    }
+  }
+
+  //Modal
+
+  .modal-shade{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9998;
+    background-color: rgba(15, 15, 15, 0.219);
+  }
+  .modal-box{
+    width: 260px;
+    height: 100px;
+    border-radius: 10px;
+    border: 1px #ccc solid;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    z-index: 9999;
+    padding: 20px;
+    background-color: #fff;
+    transition: all 1s;
+    h2 {
+      line-height: 34px;
+      font-size: 20px;
+    }
+    & > p {
+      line-height: 40px;
+      font-size: 16px;
+    }
+    & > div{
+      display: flex;
+      justify-content: flex-end;
+    }
+    button {
+      @include btnStyle($width: 60px, $height:30px, $bgColor: rgb(255, 255, 255), $color: #333);
+      font-size: 12px;
+      cursor: pointer;
+      &:hover {
+        background-color: #f2f2f2;
+      }
+    }
+    .cancel {
+       margin-right: 10px;
+    }
+    // .ok {
+      
+    // }
+  }

@@ -1,0 +1,36 @@
+
+//  $basicColor: $mainColor
+$mainColor: #ece7e5;
+
+@mixin btnStyle($width:60px, $height: 34px, $borderColor:#ccc, $bgColor: $mainColor, $radius: 4px, $color: #ffffff, $margin: 0px) {
+    width: $width;
+    height: $height;
+    background: $bgColor;
+    border: 1px solid $borderColor;
+    border-radius: $radius;
+    color: $color;
+    margin: $margin;
+    &:hover {
+      background: $bgColor;
+      border: 1px solid $borderColor;
+      border-radius: $radius;
+    }
+    &:focus {
+      border-color: #409eff;
+   }
+  }
+
+  @mixin inputStyle($width:200px, $height: 34px, $borderRadius:4px) {
+    width: $width;
+    height: $height;
+    outline:none;
+    border: 1px solid #dcdfe6;
+    border-radius: $borderRadius;
+    background: #ffffff;
+    margin-left: 10px;
+    padding: 0 10px;
+    &:focus {
+        border-color: #409eff;
+        border-radius: $borderRadius;
+    }
+  }
