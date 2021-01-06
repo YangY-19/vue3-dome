@@ -11,7 +11,7 @@
     "@babel/core": "^7.10.3",
     "animate.css": "^4.1.0",
     "ant-design-vue": "^1.6.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "babel-preset-es2015": "^6.24.1",
     "compression-webpack-plugin": "^4.0.0",
     "core-js": "^3.6.5",
